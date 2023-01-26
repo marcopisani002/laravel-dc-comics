@@ -22,7 +22,7 @@
     <div class="container">
         
 
-        <a class="text-center" href="comics.index">Comics</a>
+       
         @yield('content')
     </div>
 

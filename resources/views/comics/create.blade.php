@@ -1,7 +1,7 @@
 @extends('welcome')
 
 @section('content')
-  <h1>Nuovo Prodotto</h1>
+  <h1 class="mt-5 text-center mb-5">Aggiungi Prodotto</h1>
 
   <form action="{{ route('comics.store') }}" method="POST">
     @csrf
@@ -11,7 +11,7 @@
       <input type="text" class="form-control" name="name">
     </div>
     <div class="mb-3">
-      <label class="form-label">Descrizione</label>
+      <label class="form-label">Genere</label>
       <input type="text" class="form-control" name="description">
     </div>
     <div class="mb-3">
@@ -23,7 +23,7 @@
       <input type="text" class="form-control" name="available">
     </div>
 
-    <button class="btn btn-primary" type="submit">Salva prodotto</button>
+    <button class="btn btn-primary" type="submit">aggiungi prodotto</button>
   </form>
 
 @endsection

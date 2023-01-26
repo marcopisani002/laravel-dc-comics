@@ -15,7 +15,7 @@ class PageController extends Controller
     public function index()
     {  $comics = Comic::all();
        
-       dump($comics);
+      
        
         return view("comics.index", [
             "comics" => $comics
@@ -30,7 +30,7 @@ class PageController extends Controller
      */
     public function create()
     {
-        return view("products.create");
+        return view("comics.create");
     }
 
     /**
@@ -41,7 +41,26 @@ class PageController extends Controller
      */
     public function store(Request $request)
     {
-        //
+         // recuperiamo tutti i dati inviati dal form sotto forma di array associativo
+         $data = $request->all();
+
+       
+ 
+         // Con i dati ricevuti, creo una nuova riga nel database
+         $comic = new Comic();
+         $comic->anno_uscita = $data["anno_uscita"];
+         $comic->genere = $data["genere"];
+         $comic->prezzo = (float) $data["prezzo"];
+         $comic->disponibile = $data["disponibile"] === "si" ? 1 : 0;
+         
+         $comic->save();
+ 
+         // Per evitare che l'utente rimanga sulla pagina in POST,
+         // e ricaricando la pagina possa reinviare gli stessi dati,
+         // reindirizziamo l'utente ad un'altra pagina a nostro piacimento.
+         // Se la pagina ha un parametro dinamico, dobbiamo passarlo come secondo
+         // argomento della funzione route.
+         return redirect()->route("comics.show", $comic->id);
     }
 
     /**
@@ -52,7 +71,19 @@ class PageController extends Controller
      */
     public function show($id)
     {
-        //
+        // dalla tabella products, devo cercare un elemento che abbia l'id indicato
+        // $product = Product::find($id);
+
+        // Il find or fail, lavora come il find, con la differenza che se NON trova
+        // quello che cerca, non ritorna null, ma lancia un errore 404 not found.
+        $comic =Comic::findOrFail($id);
+
+      
+
+        // dd($product);
+        return view("comics.show", [
+            "comic" => $comic
+        ]);
     }
 
     /**

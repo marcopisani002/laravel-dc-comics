@@ -31,35 +31,33 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav " style="">
-                        <li class="nav-item px-3">
-                            <a class="nav-link text-black fw-bold " aria-current="page" href="#">CHARACTERS</a>
+                        <li class="nav-item ">
+                            <a class="nav-link nav-i fw-bold " href="/">HOME</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link nav-i fw-bold " href="comics/index">COMICS LIST</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-black fw-bold" href="#">COMICS</a>
+                            <a class="nav-link nav-i fw-bold" href="/create">ADD COMIC</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-black fw-bold" href="#">MOVIES</a>
+                            <a class="nav-link nav-i fw-bold">TV</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-black fw-bold">TV</a>
+                            <a class="nav-link nav-i fw-bold">GAMES</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-black fw-bold">GAMES</a>
+                            <a class="nav-link nav-i fw-bold">COLLECTIBLES</a>
+                        </li>
+                       
+                        <li class="nav-item">
+                            <a class="nav-link nav-i fw-bold">FANS</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-black fw-bold">COLLECTIBLES</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-black fw-bold">VIDEOS</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-black fw-bold">FANS</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-black fw-bold">NEWS</a>
+                            <a class="nav-link nav-i fw-bold">NEWS</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-black fw-bold" href="#" role="button"
+                            <a class="nav-link dropdown-toggle nav-i fw-bold" href="#" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false">
                                 SHOP
                             </a>
