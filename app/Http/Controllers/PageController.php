@@ -15,7 +15,7 @@ class PageController extends Controller
     public function index()
     {  $comics = Comic::all();
        
-       
+       dump($comics);
        
         return view("comics.index", [
             "comics" => $comics
@@ -30,7 +30,7 @@ class PageController extends Controller
      */
     public function create()
     {
-        //
+        return view("products.create");
     }
 
     /**

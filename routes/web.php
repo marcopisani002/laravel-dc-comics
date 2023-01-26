@@ -18,6 +18,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// Read - Rotta che legge tutti gli elementi presenti nella tabella products
-// La risorsa / entità dovrà chiamarsi come la tabella, in lowercase, al plurale
-Route::get("/comics", [PageController::class, "index"])->name("comics.index");
+
+Route::get("/comics/index", [PageController::class, "index"])->name("comics.index");
+
+Route::get("/comics/create", [PageController::class, "create"])->name("comics.create");
