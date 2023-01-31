@@ -48,10 +48,11 @@ class PageController extends Controller
  
       
          $comic = new Comic();
-         $comic->title = $data["title"];
-         $comic->genere = $data["genere"];
-         $comic->prezzo = (float) $data["prezzo"];
-         $comic->disponibile = $data["disponibile"] === "si" ? 1 : 0;
+         $comic->title = $data["name"];
+         $comic->genere = $data["description"];
+         $comic->anno_uscita = $data["anno_uscita"];
+         $comic->prezzo = (float) $data["price"];
+         $comic->disponibile = $data["available"] === "si" ? 1 : 0;
          
          $comic->save();
  
